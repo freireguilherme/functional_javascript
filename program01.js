@@ -1,3 +1,3 @@
 module.exports = (input) => {
-   return input.toUpperCase();
+    return input.toUpperCase();
 }
