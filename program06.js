@@ -1,11 +1,11 @@
 function countWords(inputWords) {
-    return inputWords.reduce((acumudalor, valorAtual) =>{
-        if(acumudalor[valorAtual]){
-            acumudalor[valorAtual]++;
-        }else
-            acumudalor[valorAtual] = 1;
-        return acumudalor;
-    }, {});
+    return inputWords.reduce( (acumulador, valorAtual) =>{       // primeiro argumento, callback function
+        if(valorAtual in acumulador)
+            acumulador[valorAtual]++;                           // incrementa ou inicializa com 1.
+        else
+            acumulador[valorAtual] = 1;
+        return acumulador;
+    }, {});                                                     // segundo argumento de reduce, vazio
 };
 
 module.exports = countWords;
